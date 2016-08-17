@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CompoundLayoutLib</string>
+    <string name="main_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="title">Some actresses</string>
+    <string name="audrey_hepburn">Audrey Hepburn</string>
+    <string name="doris_day">Doris Day</string>
+    <string name="grace_kelly">Grace Kelly</string>
+    <string name="tippi_hedren">Tippi Hedren</string>
+    <string name="jaouan">Jaouan</string>
+</resources>
