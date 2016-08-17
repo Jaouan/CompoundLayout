@@ -125,7 +125,7 @@ Checked state can be retrieved using **myCompoundLayout.isChecked()**, and can b
 </com.jaouan.compoundlayout.RadioLayoutGroup>
 ```
 
-You can use **myGradientRadioLayout.setColorA()**, **myGradientRadioLayout.setColorA()** and **myGradientRadioLayout.setAngle()** to configure the gradient effect programmatically.
+You can use **myGradientRadioLayout.setColorA()**, **myGradientRadioLayout.setColorB()** and **myGradientRadioLayout.setAngle()** to configure the gradient effect programmatically.
 
 
 License
