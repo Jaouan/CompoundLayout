@@ -5,6 +5,7 @@ It's an Android library that allows you to use Layout as RadioButton or CheckBox
 The librarie is Android 14+ compatible. Gradient effect is only Android 21+ compatible.
 
 ![demo](art/demo.gif)
+
 *Demo inspired by [Cris Samson's gradient hover animation](https://dribbble.com/shots/2892770-Gradient-hover-animation)*
 
 
@@ -26,11 +27,11 @@ compile 'com.github.jaouan:compoundlayout:1.0.0'
 Usage
 --------
 
-## General
-*CompoundLayout* checked state can be changed programmatically using method *myCompoundLayout.setChecked()*.
-Checked state can be retrieved using *myCompoundLayout.isChecked()*, and can be listened using *myCompoundLayout.setOnCheckedChangeListener()*.
+#### General
+*CompoundLayout* checked state can be changed programmatically using method **myCompoundLayout.setChecked()**.
+Checked state can be retrieved using **myCompoundLayout.isChecked()**, and can be listened using **myCompoundLayout.setOnCheckedChangeListener()**.
 
-## Layout as CheckBox
+#### Layout as CheckBox
 
 ```xml
 <com.jaouan.compoundlayout.CompoundLayout
@@ -47,8 +48,8 @@ Checked state can be retrieved using *myCompoundLayout.isChecked()*, and can be 
 </com.jaouan.compoundlayout.CompoundLayout>
 ```
 
-## Layout as RadioButton
-### Basic
+#### Layout as RadioButton
+##### Basic
 ```xml
 <com.jaouan.compoundlayout.RadioLayoutGroup
     android:layout_width="wrap_content"
@@ -83,7 +84,7 @@ Checked state can be retrieved using *myCompoundLayout.isChecked()*, and can be 
 </com.jaouan.compoundlayout.RadioLayoutGroup>
 ```
 
-### Gradient effect (Android 21+ only)
+##### Gradient effect (Android 21+ only)
 ```xml
 <com.jaouan.compoundlayout.RadioLayoutGroup
     android:layout_width="wrap_content"
@@ -123,7 +124,7 @@ Checked state can be retrieved using *myCompoundLayout.isChecked()*, and can be 
 </com.jaouan.compoundlayout.RadioLayoutGroup>
 ```
 
-You can use *myGradientRadioLayout.setColorA()*, *myGradientRadioLayout.setColorA()* and *myGradientRadioLayout.setAngle()* to configure the gradient effect programmatically.
+You can use **myGradientRadioLayout.setColorA()**, **myGradientRadioLayout.setColorA()** and **myGradientRadioLayout.setAngle()** to configure the gradient effect programmatically.
 
 
 License
