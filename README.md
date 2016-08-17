@@ -5,6 +5,7 @@ It's an Android library that allows you to use Layout as RadioButton or CheckBox
 The librarie is Android 14+ compatible. Gradient effect is only Android 21+ compatible.
 
 **Demo inspired by [Cris Samson's gradient hover animation](https://dribbble.com/shots/2892770-Gradient-hover-animation)**
+
 ![demo](art/demo.gif)
 
 
