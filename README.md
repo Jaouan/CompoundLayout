@@ -1,5 +1,6 @@
 Android - CompoundLayout
 ========
+[![Release](https://jitpack.io/v/Jaouan/CompoundLayout.svg)](https://jitpack.io/#Jaouan/CompoundLayout) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-CompoundLayout-green.svg?style=true)](https://android-arsenal.com/details/1/4171) [![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
 
 It's an Android library that allows you to use Layout as RadioButton or CheckBox.
 The librarie is Android 14+ compatible. Gradient effect is only Android 21+ compatible.
