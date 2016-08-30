@@ -46,28 +46,44 @@ public class CompoundLayout extends FrameLayout implements Checkable {
     private boolean mBroadcasting;
 
     public CompoundLayout(Context context) {
-        this(context, null);
+        super(context);
+        initialize(context, null, 0, 0);
     }
 
     public CompoundLayout(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+        initialize(context, attrs, 0, 0);
     }
 
     public CompoundLayout(Context context, AttributeSet attrs, int defStyleAttr) {
-        this(context, attrs, defStyleAttr, 0);
+        super(context, attrs, defStyleAttr);
+        initialize(context, attrs, defStyleAttr, 0);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public CompoundLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+        initialize(context, attrs, defStyleAttr, defStyleRes);
+    }
 
+    /**
+     * Initialize view.
+     *
+     * @param context      Context.
+     * @param attrs        Attributs.
+     * @param defStyleAttr Def style attributes.
+     * @param defStyleRes  Def style ressource.
+     */
+    private void initialize(final Context context, final AttributeSet attrs, final int defStyleAttr, final int defStyleRes) {
         // - Initialize from XML attributes.
-        final TypedArray styleAttributes = context.obtainStyledAttributes(
-                attrs, R.styleable.CompoundLayout, defStyleAttr, defStyleRes);
-        final boolean checked = styleAttributes.getBoolean(
-                R.styleable.CompoundLayout_checked, false);
-        setChecked(checked);
-        styleAttributes.recycle();
+        if (attrs != null) {
+            final TypedArray styleAttributes = context.obtainStyledAttributes(
+                    attrs, R.styleable.CompoundLayout, defStyleAttr, defStyleRes);
+            final boolean checked = styleAttributes.getBoolean(
+                    R.styleable.CompoundLayout_checked, false);
+            setChecked(checked);
+            styleAttributes.recycle();
+        }
 
         // - Set clickable.
         setClickable(true);
@@ -129,7 +145,7 @@ public class CompoundLayout extends FrameLayout implements Checkable {
         }
         return drawableState;
     }
-    
+
     /**
      * Defines on checked change callback.
      *

@@ -11,6 +11,7 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RectShape;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
@@ -50,19 +51,38 @@ public class GradientRadioLayout extends RadioLayout {
     private int mSideHypot;
 
     public GradientRadioLayout(Context context) {
-        this(context, null);
+        super(context);
+        initialize(context, null, 0, 0);
     }
 
     public GradientRadioLayout(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+        initialize(context, attrs, 0, 0);
     }
 
     public GradientRadioLayout(Context context, AttributeSet attrs, int defStyleAttr) {
-        this(context, attrs, defStyleAttr, 0);
+        super(context, attrs, defStyleAttr);
+        initialize(context, attrs, defStyleAttr, 0);
     }
 
     public GradientRadioLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+        initialize(context, attrs, defStyleAttr, defStyleRes);
+    }
+
+    /**
+     * Initialize view.
+     *
+     * @param context      Context.
+     * @param attrs        Attributes.
+     * @param defStyleAttr Def styles attributes.
+     * @param defStyleRes  Def style ressources.
+     */
+    private void initialize(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        // - Check API version.
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            Log.e("GradientRadioLayout", "GradientRadioLayout is only Android 21+ compatible. The view will crash !");
+        }
 
         // - Initialize widget from XML attributes.
         final TypedArray styleAttributes = context.obtainStyledAttributes(
