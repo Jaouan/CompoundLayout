@@ -22,7 +22,7 @@ repositories {
 ```
 
 ```java
-compile 'com.github.jaouan:compoundlayout:1.0.0'
+compile 'com.github.jaouan:compoundlayout:1.0.1'
 ```
 
 
